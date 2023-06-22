@@ -28,7 +28,7 @@ func TestGetAccountAPI(t *testing.T) {
 		accountID     int64
 		setupAuth     func(t *testing.T, request *http.Request, tokenMaker token.Maker)
 		buildStubs    func(store *mockdb.MockStore)
-		checkResponse func(t *testing.T, recoder *httptest.ResponseRecorder)
+		checkResponse func(t *testing.T, recorder *httptest.ResponseRecorder)
 	}{
 		{
 			name:      "OK",
@@ -160,7 +160,7 @@ func TestCreateAccountAPI(t *testing.T) {
 		body          gin.H
 		setupAuth     func(t *testing.T, request *http.Request, tokenMaker token.Maker)
 		buildStubs    func(store *mockdb.MockStore)
-		checkResponse func(recoder *httptest.ResponseRecorder)
+		checkResponse func(recorder *httptest.ResponseRecorder)
 	}{
 		{
 			name: "OK",
@@ -287,7 +287,7 @@ func TestListAccountsAPI(t *testing.T) {
 		query         Query
 		setupAuth     func(t *testing.T, request *http.Request, tokenMaker token.Maker)
 		buildStubs    func(store *mockdb.MockStore)
-		checkResponse func(recoder *httptest.ResponseRecorder)
+		checkResponse func(recorder *httptest.ResponseRecorder)
 	}{
 		{
 			name: "OK",

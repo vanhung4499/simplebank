@@ -2,13 +2,15 @@ package db
 
 import (
 	"context"
-	"github.com/jackc/pgx/v5/pgxpool"
-	_ "github.com/lib/pq"
-	"github.com/vanhung4499/simplebank/util"
 	"log"
 	"os"
 	"testing"
+
+	"github.com/jackc/pgx/v5/pgxpool"
+	"github.com/vanhung4499/simplebank/util"
 )
+
+var testStore Store
 
 func TestMain(m *testing.M) {
 	config, err := util.LoadConfig("../..")
@@ -22,6 +24,5 @@ func TestMain(m *testing.M) {
 	}
 
 	testStore = NewStore(connPool)
-
 	os.Exit(m.Run())
 }

@@ -7,8 +7,6 @@ import (
 	"testing"
 )
 
-var testStore Store
-
 func TestTransferTx(t *testing.T) {
 	account1 := createRandomAccount(t)
 	account2 := createRandomAccount(t)
