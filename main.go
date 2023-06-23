@@ -10,6 +10,7 @@ import (
 	"github.com/jackc/pgx/v5/pgxpool"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
+
 	"github.com/vanhung4499/simplebank/api"
 	db "github.com/vanhung4499/simplebank/db/sqlc"
 	"github.com/vanhung4499/simplebank/util"
